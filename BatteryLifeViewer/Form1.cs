@@ -44,7 +44,7 @@ namespace BatteryLifeViewer
             battery.Update();
             for (int i = 0; i < battery.batteryInfoZ.Length; i++)
             {
-                listBox1.Items.Add("battery" + (i + 1));
+                listBox1.Items.Add($"バッテリー{i + 1}");
             }
             listBox1.SelectedIndex = (listBox1.Items.Count > 0) ? 0 : -1;
             UpdateBattery();
