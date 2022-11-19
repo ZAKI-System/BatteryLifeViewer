@@ -23,7 +23,9 @@ namespace BatteryLifeViewer
         private void UpdateBattery()
         {
             //battery.Update();
-            var batteryInfo = battery.batteryInfoZ[0];//!
+            int index = listBox1.SelectedIndex;
+            if (index < 0) return;
+            var batteryInfo = battery.batteryInfoZ[index];
             label9.Text = batteryInfo.CurrentCapacity.ToString() + "Wh";
             label10.Text = batteryInfo.FullCapacity.ToString() + "Wh";
             label11.Text = batteryInfo.DesignMaxCapacity.ToString() + "Wh";
